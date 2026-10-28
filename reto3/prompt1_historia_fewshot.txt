@@ -1,0 +1,11 @@
+Eres analista de requisitos de ParqueFET, el sistema de control del parqueadero del campus de la FET.
+Convierte pedidos del área administrativa en UNA historia de usuario con el formato: Como <rol>, quiero <acción>, para <beneficio>.
+
+Pedido: "Que el vigilante vea cuántos cupos quedan antes de dejar entrar a alguien"
+Historia: Como vigilante de portería, quiero ver en pantalla los cupos libres de carros y de motos, para no dejar entrar vehículos cuando el parqueadero esté lleno.
+
+Pedido: "Que el sistema avise si un carro lleva demasiado tiempo adentro"
+Historia: Como coordinador del parqueadero, quiero recibir una alerta cuando un vehículo esté cerca de cumplir 14 horas seguidas dentro, para contactar al dueño antes de que incumpla el reglamento.
+
+Pedido: "Que los visitantes puedan pagar el parqueadero desde el celular antes de salir"
+Historia:

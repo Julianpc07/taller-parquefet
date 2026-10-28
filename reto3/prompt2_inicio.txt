@@ -1,0 +1,21 @@
+Escribe entre 3 y 5 criterios de aceptación para la historia de usuario de ParqueFET que está dentro de <historia>.
+Los criterios deben describir cómo funciona el pago desde el celular que pide la historia. No conviertas cada regla de negocio en un criterio: las reglas son contexto, no la funcionalidad.
+Usa exactamente este formato para cada criterio, sin texto antes ni después:
+
+Criterio N: <título corto>
+Dado <situación inicial>
+Cuando <acción del usuario>
+Entonces <resultado esperado>
+
+Usa de las reglas dentro de <reglas> solo las que afectan el pago. No inventes reglas, métodos de pago ni valores que no aparezcan allí.
+El cobro se calcula sobre el tiempo real transcurrido desde la entrada hasta el momento del pago, y cada fracción de hora se cobra como hora completa. Ejemplo: un carro con 1 hora y 10 minutos paga 2 horas, es decir, $6.000.
+
+<reglas>
+- Solo ingresan vehículos registrados a un carné vigente.
+- Capacidad: 120 carros y 300 motos.
+- Estudiantes y personal no pagan; visitantes pagan $3.000 (carro) o $1.500 (moto) por hora o fracción.
+- Un carné solo puede tener un vehículo dentro a la vez.
+- Ningún vehículo puede permanecer más de 14 horas seguidas.
+</reglas>
+
+<historia>

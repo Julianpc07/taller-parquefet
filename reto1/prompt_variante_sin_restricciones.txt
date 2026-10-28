@@ -1,0 +1,21 @@
+[QUÉ QUIERO] Escribe en Python 3.12 la función registrar_entrada(vehiculo, carne, ocupados, carnes_con_vehiculo_dentro, hora_entrada) que decide si un vehículo puede entrar al parqueadero del campus y, si puede, registra la entrada.
+
+[PARA QUIÉN] La usará el backend en FastAPI del sistema ParqueFET (control del parqueadero de la FET). La mantendrán desarrolladores junior, así que el código debe ser fácil de leer.
+
+[CONTEXTO] Los parámetros que recibe la función son:
+- vehiculo: objeto con placa (str), tipo ("carro" o "moto") y carne_id (str, el carné al que está registrado; None si no está registrado).
+- carne: objeto con id (str), vigente (bool) y tipo_usuario ("estudiante", "personal" o "visitante").
+- ocupados: diccionario con los cupos ocupados en este momento, por ejemplo {"carros": 87, "motos": 210}.
+- carnes_con_vehiculo_dentro: conjunto (set) con los id de los carnés que ya tienen un vehículo dentro.
+- hora_entrada: datetime con la hora de llegada.
+Las reglas de negocio del parqueadero están dentro de <reglas>. Úsalas todas para decidir la entrada.
+
+<reglas>
+- Solo ingresan vehículos registrados a un carné vigente.
+- Capacidad: 120 carros y 300 motos.
+- Estudiantes y personal no pagan; visitantes pagan $3.000 (carro) o $1.500 (moto) por hora o fracción.
+- Un carné solo puede tener un vehículo dentro a la vez.
+- Ningún vehículo puede permanecer más de 14 horas seguidas.
+</reglas>
+
+[FORMATO DE SALIDA] Devuelve solo el código, con type hints y docstring. La función retorna una tupla (bool, motivo): (True, "OK") si el vehículo puede entrar, o (False, motivo) con un motivo claro en español cuando se rechaza. Si el vehículo entra, actualiza ocupados y carnes_con_vehiculo_dentro.

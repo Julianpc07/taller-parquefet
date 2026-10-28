@@ -1,0 +1,51 @@
+Con base en los criterios de aceptación de ParqueFET que están dentro de <criterios>, escribe una tabla Markdown de casos de prueba con exactamente estas columnas:
+
+| Caso | Entrada | Resultado esperado | Criterio que cubre |
+
+- Caso: un identificador CP-01, CP-02, etc.
+- Entrada: datos concretos (tipo de usuario, tipo de vehículo, hora de entrada y de salida, monto pagado).
+- Resultado esperado: lo que el sistema debe hacer, con valores exactos cuando haya cobro.
+- Criterio que cubre: el número del criterio.
+
+Incluye al menos un caso de borde (por ejemplo, una fracción de hora o un usuario que no paga).
+Antes de entregar, revisa que cada criterio tenga al menos un caso; si falta, agrégalo e indica debajo de la tabla cuál agregaste.
+Devuelve solo la tabla y, si aplica, esa nota.
+
+<criterios>
+Criterio 1: Solo se permite ingresar al parqueadero si el vehículo está reg[3D[K
+registrado a un carné vigente.
+Dado que soy un usuario del sistema
+Cuando intento registrar un vehículo sin carné activo
+Entonces el sistema rechaza la entrada y muestra un mensaje de error indica[6D[K
+indicando que el carné no es válido.
+
+Criterio 2: El sistema permite ingresar al máximo 120 carros y 300 motos si[2D[K
+simultáneamente en el parqueadero.
+Dado que estoy intentando registrar vehículos
+Cuando el número total de vehículos registrados supera la capacidad máxima
+Entonces el sistema bloquea nuevas inscripciones y muestra un mensaje indic[5D[K
+indicando la disponibilidad restante.
+
+Criterio 3: Los estudiantes y personal no pagan, mientras que los visitante[9D[K
+visitantes pagan $3.000 por hora o fracción para carros y $1.500 por hora o[1D[K
+o fracción para motos.
+Dado que soy un visitante con un vehículo registrado
+Cuando intento realizar el pago en la aplicación
+Entonces el sistema calcula y muestra el monto exacto a pagar basado en mi [K
+tipo de vehículo y tiempo estimado de permanencia.
+
+Criterio 4: Un carné solo puede tener un vehículo dentro del parqueadero a [K
+la vez.
+Dado que tengo un carné activo con un vehículo ya registrado
+Cuando intento registrar otro vehículo bajo el mismo carné
+Entonces el sistema rechaza la nueva inscripción y muestra un mensaje indic[5D[K
+indicando que el carné ya tiene un vehículo ocupando el espacio.
+
+Criterio 5: Ningún vehículo puede permanecer más de 14 horas seguidas en el[2D[K
+el parqueadero.
+Dado que mi vehículo ha estado registrado por tiempo prolongado
+Cuando intento realizar una operación de pago o salida
+Entonces el sistema bloquea la transacción y muestra un mensaje indicando q[1D[K
+que el límite de permanencia de 14 horas ha sido superado.
+
+</criterios>

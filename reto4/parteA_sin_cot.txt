@@ -1,0 +1,16 @@
+¿Por qué esta función de ParqueFET deja entrar un carro cuando el parqueadero ya tiene 120 carros dentro, y qué otros errores tiene según las reglas?
+
+<reglas>
+- Solo ingresan vehículos registrados a un carné vigente.
+- Capacidad: 120 carros y 300 motos.
+- Un carné solo puede tener un vehículo dentro a la vez.
+</reglas>
+
+<codigo>
+def puede_ingresar(vehiculo, ocupados):
+    if not vehiculo.carne_vigente:
+        return False
+    if vehiculo.tipo == "carro" and ocupados["carros"] > 120:
+        return False
+    return True
+</codigo>

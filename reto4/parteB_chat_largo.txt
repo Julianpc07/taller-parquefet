@@ -1,0 +1,37 @@
+RETO 4 · PARTE B · LA INSTRUCCIÓN QUE SE OLVIDA (ParqueFET)
+Escriba cada línea dentro del chat de Ollama, una por una, y presione Enter después de cada una.
+Espere a que termine cada respuesta antes de escribir la siguiente.
+Copie cada respuesta completa en el archivo indicado.
+
+Abrir el chat (en cmd, desde la raíz del repositorio):
+
+ollama run qwen-demo --think=false
+
+=== VERSIÓN A · la regla como mensaje del chat ===
+
+/set parameter num_ctx 512
+Regla: empieza SIEMPRE tu respuesta con «Veredicto ParqueFET:». ¿Entendido?
+Explica en al menos 400 palabras cómo debería funcionar el control de entrada y salida de vehículos en el parqueadero de una universidad.
+Explica en al menos 400 palabras cómo se calcula el cobro por hora o fracción a los visitantes de un parqueadero.
+
+-> Copie la respuesta a la regla y las dos respuestas largas en: reto4\salida_parteB_versionA.md
+
+=== VERSIÓN B · la misma regla como system prompt ===
+
+/clear
+/set parameter num_ctx 512
+/set system Empieza SIEMPRE tu respuesta con «Veredicto ParqueFET:».
+Explica en al menos 400 palabras cómo debería funcionar el control de entrada y salida de vehículos en el parqueadero de una universidad.
+Explica en al menos 400 palabras cómo se calcula el cobro por hora o fracción a los visitantes de un parqueadero.
+/bye
+
+-> Copie las dos respuestas largas en: reto4\salida_parteB_versionB.md
+
+=== SI NO SALE COMO SE ESPERA ===
+
+- Si en la versión A la segunda respuesta todavía empieza con «Veredicto ParqueFET:», probablemente
+  la primera respuesta fue corta y siguió en la ventana, y el modelo la imitó. Haga una tercera
+  pregunta igual de larga o baje la ventana con: /set parameter num_ctx 384
+- Si la regla deja de cumplirse antes de llenar la ventana, no es recorte sino deriva: anótelo.
+- Si /clear borra el num_ctx en su versión de Ollama, la línea /set parameter num_ctx 512 de la
+  versión B lo vuelve a fijar.

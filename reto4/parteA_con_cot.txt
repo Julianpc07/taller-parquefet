@@ -1,0 +1,26 @@
+Un carro con carné vigente logró entrar cuando el parqueadero de ParqueFET ya tenía 120 carros dentro.
+Evalúa la función paso a paso con estos datos concretos antes de concluir:
+vehiculo.carne_vigente = True, vehiculo.tipo = "carro", ocupados = {"carros": 120, "motos": 300}.
+
+Para cada if, escribe:
+1. La condición.
+2. Su valor con los datos (True o False).
+3. Si la función retorna en ese punto y qué retorna.
+
+Después repite la evaluación con vehiculo.tipo = "moto" y los mismos datos.
+Por último, compara la función con cada regla dentro de <reglas> y lista todos los errores que encuentres, con la línea y la corrección.
+
+<reglas>
+- Solo ingresan vehículos registrados a un carné vigente.
+- Capacidad: 120 carros y 300 motos.
+- Un carné solo puede tener un vehículo dentro a la vez.
+</reglas>
+
+<codigo>
+def puede_ingresar(vehiculo, ocupados):
+    if not vehiculo.carne_vigente:
+        return False
+    if vehiculo.tipo == "carro" and ocupados["carros"] > 120:
+        return False
+    return True
+</codigo>

@@ -1,0 +1,24 @@
+Escribe entre 3 y 5 criterios de aceptación para la historia de usuario de ParqueFET que está dentro de <historia>.
+Usa exactamente este formato para cada criterio, sin texto antes ni después:
+
+Criterio N: <título corto>
+Dado <situación inicial>
+Cuando <acción del usuario>
+Entonces <resultado esperado>
+
+Usa solo las reglas de negocio que están dentro de <reglas>. No inventes reglas, métodos de pago ni valores que no aparezcan allí.
+
+<reglas>
+- Solo ingresan vehículos registrados a un carné vigente.
+- Capacidad: 120 carros y 300 motos.
+- Estudiantes y personal no pagan; visitantes pagan $3.000 (carro) o $1.500 (moto) por hora o fracción.
+- Un carné solo puede tener un vehículo dentro a la vez.
+- Ningún vehículo puede permanecer más de 14 horas seguidas.
+</reglas>
+
+<historia>
+Como visitante, quiero poder realizar el pago del parqueadero desde mi celu[4D[K
+celular antes de salir, para evitar filas en la portería y tener un control[7D[K
+control inmediato de que debo abandonar el espacio.
+
+</historia>

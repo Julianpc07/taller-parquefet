@@ -1,0 +1,14 @@
+Con base en los criterios de aceptación de ParqueFET que están dentro de <criterios>, escribe una tabla Markdown de casos de prueba con exactamente estas columnas:
+
+| Caso | Entrada | Resultado esperado | Criterio que cubre |
+
+- Caso: un identificador CP-01, CP-02, etc.
+- Entrada: datos concretos (tipo de usuario, tipo de vehículo, hora de entrada y de salida, monto pagado).
+- Resultado esperado: lo que el sistema debe hacer, con valores exactos cuando haya cobro.
+- Criterio que cubre: el número del criterio.
+
+Incluye al menos un caso de borde (por ejemplo, una fracción de hora o un usuario que no paga).
+Antes de entregar, revisa que cada criterio tenga al menos un caso; si falta, agrégalo e indica debajo de la tabla cuál agregaste.
+Devuelve solo la tabla y, si aplica, esa nota.
+
+<criterios>
